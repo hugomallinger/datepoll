@@ -41,6 +41,7 @@ Datepoll is not affiliated with, endorsed by or connected to WhatsApp or Meta.
 - Store icon (128×128): `icons/icon-128.png`
 - Screenshots (1280×800): `store/screenshot-1.png`, `store/screenshot-2.png`
 - Small promo tile (440×280): `store/promo-small.png`
+- Marquee promo tile (1400×560, optional): `store/promo-marquee.png`
 
 **Homepage URL:** https://github.com/hugomallinger/datepoll
 **Support URL:** https://github.com/hugomallinger/datepoll/issues
