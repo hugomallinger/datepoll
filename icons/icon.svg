@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Chat bubble: circle with a tail at the bottom left, in WhatsApp-like green. -->
+  <circle cx="66" cy="60" r="54" fill="#25D366"/>
+  <path d="M30 92 L10 120 L46 106 Z" fill="#25D366" stroke="#25D366" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Calendar page -->
+  <rect x="34" y="34" width="64" height="56" rx="9" fill="#ffffff"/>
+  <path d="M34 43 a9 9 0 0 1 9 -9 h46 a9 9 0 0 1 9 9 v9 h-64 z" fill="#0b7a5c"/>
+  <!-- Binder rings -->
+  <rect x="47" y="26" width="8" height="16" rx="4" fill="#ffffff" stroke="#0b7a5c" stroke-width="3"/>
+  <rect x="77" y="26" width="8" height="16" rx="4" fill="#ffffff" stroke="#0b7a5c" stroke-width="3"/>
+  <!-- Check mark: the chosen date -->
+  <path d="M51 70 l10 10 l20 -20" fill="none" stroke="#25D366" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

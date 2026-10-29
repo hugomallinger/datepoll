@@ -1,0 +1,9 @@
+{
+  "name": "datepoll",
+  "private": true,
+  "description": "Chrome extension for creating date polls on WhatsApp Web",
+  "license": "MIT",
+  "scripts": {
+    "test": "TZ=Europe/Berlin node --test 'tests/*.test.js'"
+  }
+}
