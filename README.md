@@ -54,6 +54,14 @@ npm test
 
 The icon source is [`icons/icon.svg`](icons/icon.svg). The PNGs (16/32/48/128) are rendered from it.
 
+### Chrome Web Store
+
+`scripts/package.sh` builds `dist/datepoll-<version>.zip` with only the files the extension loads. [`store/listing.md`](store/listing.md) has the listing texts and privacy answers for the Developer Dashboard. The store images in `store/` are rendered from the made-up scenes in `store/scenes/` (1280×800 screenshots, 440×280 promo tile).
+
+## Privacy
+
+Datepoll collects no data. See the [privacy policy](PRIVACY.md).
+
 ## License
 
 [MIT](LICENSE)

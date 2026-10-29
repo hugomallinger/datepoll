@@ -1,0 +1,60 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../panel.css">
+<link rel="stylesheet" href="scene.css">
+
+<div class="pitch">
+  <img src="../../icons/icon-128.png" alt="">
+  <h1>Pick the dates.<br>Get a poll.</h1>
+  <p>Click the calendar next to +, choose days and times, and Datepoll fills in the poll for you.</p>
+  <p>No more typing every date by hand.</p>
+</div>
+
+<div class="window">
+  <div class="topbar">
+    <div class="avatar">🏕️</div>
+    <div><b>Weekend trip</b><span>Anna, Ben, Chloé, David, You</span></div>
+  </div>
+  <div class="messages">
+    <div class="msg"><span class="who" style="color:#f7b267">Anna</span>So when are we going? 😄<span class="t">18:02</span></div>
+    <div class="msg"><span class="who" style="color:#7fd1ff">Ben</span>Any weekend in November works for me<span class="t">18:04</span></div>
+    <div class="msg me">I'll make a poll<span class="t">18:05</span></div>
+  </div>
+  <div class="composer">
+    <div class="ic">＋</div>
+    <div class="ic active"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div>
+    <div class="ic">☺</div>
+    <div class="field">Type a message</div>
+  </div>
+
+  <div class="panel" data-theme="dark" style="max-height: none">
+    <header><span class="title">Date poll</span><button class="icon close">×</button></header>
+    <div class="body">
+      <label class="field"><span class="label">Question</span><input type="text" class="question" value="Which weekend works?"></label>
+      <div class="cal">
+        <div class="cal-nav"><button class="icon prev">‹</button><span class="month">November 2026</span><button class="icon next">›</button></div>
+        <div class="grid" id="grid"></div>
+      </div>
+      <div class="row"><span class="label">Days</span><div class="seg"><button class="active">All</button><button>Weekdays</button><button>Weekends</button></div></div>
+      <label class="check"><input type="checkbox" class="group" checked> Group by week</label>
+      <div class="preview" style="height: 118px">
+        <div class="preview-head"><span class="label">Options</span><span class="count">4 / 12</span></div>
+        <ol class="options" id="options"></ol>
+      </div>
+    </div>
+    <footer><button class="btn clear">Clear</button><button class="btn primary create">Create poll</button></footer>
+  </div>
+</div>
+
+<script>
+  // November 2026 starts on a Sunday. Selected: Fri–Sun of four weekends, grouped by week.
+  const selected = [6, 7, 8, 13, 14, 15, 20, 21, 22, 27, 28, 29];
+  const cells = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map((d) => `<span class="wd">${d}</span>`);
+  for (let i = 0; i < 6; i++) cells.push('<span></span>');
+  for (let d = 1; d <= 30; d++) {
+    cells.push(`<button class="${selected.includes(d) ? 'day selected' : 'day'}">${d}</button>`);
+  }
+  document.getElementById('grid').innerHTML = cells.join('');
+  document.getElementById('options').innerHTML = ['Fri 6 – Sun 8 Nov', 'Fri 13 – Sun 15 Nov', 'Fri 20 – Sun 22 Nov', 'Fri 27 – Sun 29 Nov']
+    .map((o) => `<li>${o}</li>`).join('');
+</script>
