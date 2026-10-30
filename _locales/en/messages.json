@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Datepoll – Date Polls for WhatsApp Web",
+    "description": "Store and toolbar name"
+  },
+  "extDescription": {
+    "message": "Find a date with your group: pick days and times in a calendar and turn them into a WhatsApp Web poll in one click.",
+    "description": "Store summary, max. 132 characters"
+  }
+}

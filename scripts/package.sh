@@ -10,7 +10,7 @@ out="dist/datepoll-$version.zip"
 mkdir -p dist
 rm -f "$out"
 zip -q -X "$out" \
-  manifest.json \
+  manifest.json _locales/en/messages.json _locales/de/messages.json _locales/fr/messages.json \
   selectors.js fill-poll.js dates.js panel.js content.js \
   panel.css \
   icons/icon-16.png icons/icon-32.png icons/icon-48.png icons/icon-128.png

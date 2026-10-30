@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../panel.css">
+<link rel="stylesheet" href="scene.css">
+<script src="../../dates.js"></script>
+<script src="scene-panel.js"></script>
+
+<div class="pitch">
+  <img src="../../icons/icon-128.png" alt="">
+  <h1>Days and times<br>in one poll.</h1>
+  <p>Add time slots like 18:00 or 20:00. Each selected day gets one option per time.</p>
+  <p>Datepoll remembers your usual times for next time.</p>
+</div>
+
+<div class="window">
+  <div class="topbar">
+    <div class="avatar">💼</div>
+    <div><b>Project team</b><span>Mia, Jonas, Lea, Tom, You</span></div>
+  </div>
+  <div class="messages">
+    <div class="msg"><span class="who" style="color:#7fd1ff">Mia</span>We need one evening for the kickoff next week<span class="t">09:12</span></div>
+    <div class="msg me">Poll is coming<span class="t">09:14</span></div>
+  </div>
+  <div class="composer">
+    <div class="ic">＋</div>
+    <div class="ic active"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div>
+    <div class="ic">☺</div>
+    <div class="field">Type a message</div>
+  </div>
+  <div id="panel"></div>
+</div>
+
+<script>
+  document.getElementById('panel').outerHTML = scenePanel({ question: 'Kickoff: which evening?', month: 'November 2026', year: 2026, monthNum: 11, firstWeekday: 6, monthDays: 30, selected: [17, 18, 19], times: ['18:00', '20:00'] });
+</script>

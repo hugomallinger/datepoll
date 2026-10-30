@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../panel.css">
+<link rel="stylesheet" href="scene.css">
+<script src="../../dates.js"></script>
+<script src="scene-panel.js"></script>
+
+<div class="pitch">
+  <img src="../../icons/icon-128.png" alt="">
+  <h1>Dates in your<br>group's language.</h1>
+  <p>Date labels in English, German or French. On Auto, Datepoll follows the language of WhatsApp.</p>
+  <p>Mo. 23. Nov. · lun. 23 nov. · Mon 23 Nov</p>
+</div>
+
+<div class="window">
+  <div class="topbar">
+    <div class="avatar">🍝</div>
+    <div><b>Familie</b><span>Mama, Papa, Lisa, Du</span></div>
+  </div>
+  <div class="messages">
+    <div class="msg"><span class="who" style="color:#c3a6ff">Lisa</span>Wann machen wir das Familienessen?<span class="t">19:40</span></div>
+    <div class="msg me">Ich mache eine Umfrage<span class="t">19:42</span></div>
+  </div>
+  <div class="composer">
+    <div class="ic">＋</div>
+    <div class="ic active"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div>
+    <div class="ic">☺</div>
+    <div class="field">Type a message</div>
+  </div>
+  <div id="panel"></div>
+</div>
+
+<script>
+  document.getElementById('panel').outerHTML = scenePanel({ question: 'Wann passt es euch?', month: 'November 2026', year: 2026, monthNum: 11, firstWeekday: 6, monthDays: 30, selected: [20, 21, 22, 27, 28, 29], times: ['19:30'], lang: 'de', showLabels: true });
+</script>

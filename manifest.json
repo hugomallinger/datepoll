@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Datepoll",
-  "version": "0.3.1",
-  "description": "Create date polls on WhatsApp Web in one click.",
+  "name": "__MSG_extName__",
+  "version": "0.3.2",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
   "permissions": [
     "storage"
   ],
