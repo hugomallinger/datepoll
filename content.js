@@ -46,9 +46,13 @@ function injectButton() {
   button.title = 'Create date poll';
   button.setAttribute('aria-label', 'Create date poll');
   button.innerHTML = CALENDAR_ICON;
+  // Attach stays at the bottom when the text box grows to several lines; match its height and bottom offset.
+  const attach = WA.attachButton().getBoundingClientRect();
+  const bottomGap = slot.getBoundingClientRect().bottom - attach.bottom;
   Object.assign(button.style, {
-    background: 'none', border: 'none', padding: '8px', cursor: 'pointer',
+    background: 'none', border: 'none', padding: '0 8px', cursor: 'pointer',
     color: 'inherit', display: 'flex', alignItems: 'center', opacity: '0.85',
+    alignSelf: 'flex-end', height: `${attach.height}px`, marginBottom: `${bottomGap}px`,
   });
   button.addEventListener('click', () => {
     panel ??= createPanel({ onCreate: createPoll });
